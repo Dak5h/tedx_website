@@ -10,9 +10,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/speakers", label: "Speakers" },
-  { href: "/about", label: "About" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About Us" },
+  { href: "#speakers", label: "Speakers" },
+  { href: "#support", label: "Support Us" },
+  { href: "#committee", label: "Committee" },
+  { href: "#sponsors", label: "Sponsors" },
 ];
 
 const Nav = () => {

@@ -1,20 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import Home from "./home/page";
 
-function Home(this: any) {
+function Main() {
   return (
-    <div className="flex flex-col space-y-3 items-center w-full px-44 relative">
-      <Skeleton className="w-full aspect-[16/9] rounded-xl relative">
-        {/* Overlay container */}
-        <div className="absolute inset-0 flex items-center justify-center bg-clear">
-          {/* Text inside the overlay */}
-          <span className="text-primary text-7xl font-bold">
-            TED<sup>x</sup> Granite Bay
-          </span>
-        </div>
-      </Skeleton>
+    <div className="flex flex-col space-y-3 items-center w-full px-4 pt-40">
+      <section id="home" className="relative w-full">
+        <Home />
+      </section>
+
+      <section id="about" className="relative w-full">
+        <h2>About Us</h2>
+      </section>
+
+      <section id="speakers" className="relative w-full">
+        <h2>Speakers</h2>
+      </section>
+
+      <section id="committee" className="relative w-full">
+        <h2>Committee</h2>
+      </section>
     </div>
   );
 }
 
-export default Home;
+export default Main;
