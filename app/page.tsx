@@ -1,6 +1,7 @@
 import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import Home from "./home/page";
+import About from "./about/page";
 
 function Main() {
   return (
@@ -10,7 +11,7 @@ function Main() {
       </section>
 
       <section id="about" className="relative w-full">
-        <h2>About Us</h2>
+        <About />
       </section>
 
       <section id="speakers" className="relative w-full">

@@ -9,7 +9,7 @@ import { ModeToggle } from "./mode-toggle";
 import { useTheme } from 'next-themes';
 
 const navItems = [
-  { href: "#home", label: "Home" },
+  { href: "#", label: "Home" },
   { href: "#about", label: "About Us" },
   { href: "#speakers", label: "Speakers" },
   { href: "#support", label: "Support Us" },

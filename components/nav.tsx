@@ -10,7 +10,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "#home", label: "Home" },
+  { href: "#", label: "Home" },
   { href: "#about", label: "About Us" },
   { href: "#speakers", label: "Speakers" },
   { href: "#support", label: "Support Us" },
