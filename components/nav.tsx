@@ -13,9 +13,9 @@ const navItems = [
   { href: "#", label: "Home" },
   { href: "#about", label: "About Us" },
   { href: "#speakers", label: "Speakers" },
-  { href: "#support", label: "Support Us" },
   { href: "#committee", label: "Committee" },
   { href: "#sponsors", label: "Sponsors" },
+  { href: "#support", label: "Support Us" },
 ];
 
 const Nav = () => {
