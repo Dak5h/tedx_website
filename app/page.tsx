@@ -33,10 +33,6 @@ function Main() {
       <section id="support" className="relative w-full mb-16">
         <Support />
       </section>
-
-      <section id="tickets" className="relative w-full mb-16">
-        <Tickets />
-      </section>
     </div>
   );
 }

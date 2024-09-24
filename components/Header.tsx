@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image"; // Import the Image component
-import { useTheme } from 'next-themes';
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import Nav from "@/components/nav";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -24,7 +24,9 @@ const Header = () => {
               height={10} // Set desired height
               className="object-contain" // Ensure the image scales correctly
             />
-            <span className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'} xl:block ml-3`}>
+            <span
+              className={`text-2xl ${theme === "dark" ? "text-white" : "text-black"} xl:block ml-3`}
+            >
               Granite Bay High School <span className="font-bold">Youth</span>
             </span>
           </div>
@@ -33,7 +35,7 @@ const Header = () => {
         {/* Desktop navigation */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="#tickets">
+          <Link href="/tickets">
             <Button>Buy Tickets</Button>
           </Link>
         </div>

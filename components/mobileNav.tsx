@@ -6,8 +6,8 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
-import { useTheme } from 'next-themes';
-import { useState } from 'react';
+import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const navItems = [
   { href: "#", label: "Home" },
@@ -37,7 +37,9 @@ const MobileNav = () => {
             <h1 className="text-primary font-bold text-4xl">
               TED<sup>x</sup>
             </h1>
-            <span className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+            <span
+              className={`text-2xl font-bold ${theme === "dark" ? "text-white" : "text-black"}`}
+            >
               Granite Bay High School Youth
             </span>
           </Link>
@@ -49,14 +51,16 @@ const MobileNav = () => {
               href={link.href}
               key={index}
               className={`${
-                link.href === pathname ? "text-primary border-b-2 border-primary" : ""
+                link.href === pathname
+                  ? "text-primary border-b-2 border-primary"
+                  : ""
               } text-xl capitalize hover:text-primary transition-all`}
               onClick={closeMenu} // Close menu when an item is clicked
             >
               {link.label}
             </Link>
           ))}
-          <Link href="#tickets" onClick={closeMenu}>
+          <Link href="/tickets" onClick={closeMenu}>
             <Button className="mt-2">Buy Tickets</Button>
           </Link>
         </nav>
