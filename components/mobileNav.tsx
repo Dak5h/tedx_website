@@ -25,6 +25,8 @@ const MobileNav = () => {
 
   const closeMenu = () => setIsOpen(false); // Function to close the Sheet
 
+  const isOnTicketsPage = pathname === "/tickets"; // Check if we are on the /tickets page
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="flex justify-center items-center">
@@ -38,7 +40,9 @@ const MobileNav = () => {
               TED<sup>x</sup>
             </h1>
             <span
-              className={`text-2xl font-bold ${theme === "dark" ? "text-white" : "text-black"}`}
+              className={`text-2xl font-bold ${
+                theme === "dark" ? "text-white" : "text-black"
+              }`}
             >
               Granite Bay High School Youth
             </span>
@@ -48,7 +52,7 @@ const MobileNav = () => {
         <nav className="flex flex-col justify-center items-center gap-8 overflow-y-auto max-h-[60vh]">
           {navItems.map((link, index) => (
             <Link
-              href={link.href}
+              href={isOnTicketsPage ? `/${link.href}` : link.href} // Navigate to homepage if on tickets page
               key={index}
               className={`${
                 link.href === pathname
