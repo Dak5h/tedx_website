@@ -23,7 +23,7 @@ const Tickets = () => {
     }
   }, []);
 
-  return <div id="ticketbud-container"></div>;
+  return <div id="ticketbud-container" style={{ marginBottom: "80px" }}></div>; // Adjust margin as needed
 };
 
 export default Tickets;
