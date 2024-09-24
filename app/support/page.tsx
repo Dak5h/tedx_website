@@ -4,7 +4,9 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 const Support = () => {
   return (
     <div className="w-full mx-auto p-8 mt-10">
-      <Card className="shadow-lg bg-white w-full"> {/* Set width to full */}
+      <Card className="shadow-lg bg-white w-full">
+        {" "}
+        {/* Set width to full */}
         <CardHeader>
           <CardTitle className="text-3xl lg:text-4xl font-bold text-red-600 text-center">
             Want to Support Us?
@@ -13,8 +15,8 @@ const Support = () => {
         <CardContent>
           <p className="mb-4 text-center text-gray-700">
             Contact us at:{" "}
-            <a 
-              href="mailto:tedxgranitebayhighschoolyouth@gmail.com" 
+            <a
+              href="mailto:tedxgranitebayhighschoolyouth@gmail.com"
               className="text-red-600 underline"
             >
               tedxgranitebayhighschoolyouth@gmail.com

@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from 'next/image';
+import Image from "next/image";
 
 const committeeData = [
   {
@@ -30,13 +30,13 @@ const committeeData = [
     name: "Andrew Wang",
     description: "Sponsorships & Budget Manager",
     role: "Outreach",
-    image: "/committee/Aleeza.png",
+    image: "/committee/Andrew.jpg",
   },
   {
     name: "Daksh Gupta",
     description: "Website Manager",
     role: "Outreach",
-    image: "/committee/Aleeza.png",
+    image: "/committee/Daksh.jpg",
   },
   {
     name: "Jaylene Lumaa",
@@ -72,19 +72,19 @@ const committeeData = [
     name: "Jiselle Hsin",
     description: "Post Production",
     role: "Production",
-    image: "/committee/Aleeza.png",
+    image: "/committee/Jiselle.JPG",
   },
   {
     name: "Pavan Lallian",
     description: "Post Production",
     role: "Production",
-    image: "/committee/Aleeza.png",
+    image: "/committee/Pavan_Lallian.jpg",
   },
   {
     name: "Jasmeen Lallian",
     description: "Post Production",
     role: "Production",
-    image: "/committee/Aleeza.png",
+    image: "/committee/Jasmeen.jpg",
   },
   {
     name: "Maya Fowler",
@@ -95,9 +95,15 @@ const committeeData = [
 ];
 
 const Committee = () => {
-  const firstSectionMembers = committeeData.filter(member => member.role === "FirstSection");
-  const outreachMembers = committeeData.filter(member => member.role === "Outreach");
-  const productionMembers = committeeData.filter(member => member.role === "Production");
+  const firstSectionMembers = committeeData.filter(
+    (member) => member.role === "FirstSection",
+  );
+  const outreachMembers = committeeData.filter(
+    (member) => member.role === "Outreach",
+  );
+  const productionMembers = committeeData.filter(
+    (member) => member.role === "Production",
+  );
 
   return (
     <div className="p-4">
@@ -109,30 +115,44 @@ const Committee = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {firstSectionMembers.map((member, index) => (
           <Card key={index} className="w-full">
-            <CardHeader style={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
-              <div style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "50%",
-                border: "1px solid lightgray",
+            <CardHeader
+              style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                marginRight: "16px"
-              }}>
-                <Image 
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  border: "1px solid lightgray",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                  marginRight: "16px",
+                }}
+              >
+                <Image
                   src={member.image}
                   alt={member.name}
                   width={100}
                   height={100}
                   style={{
                     borderRadius: "50%",
-                    objectFit: "cover"
-                  }} 
+                    objectFit: "cover",
+                  }}
                 />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <CardTitle>{member.name}</CardTitle>
                 <CardDescription>{member.description}</CardDescription>
               </div>
@@ -146,30 +166,44 @@ const Committee = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {outreachMembers.map((member, index) => (
           <Card key={index} className="w-full">
-            <CardHeader style={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
-              <div style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "50%",
-                border: "1px solid lightgray",
+            <CardHeader
+              style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                marginRight: "16px"
-              }}>
-                <Image 
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  border: "1px solid lightgray",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                  marginRight: "16px",
+                }}
+              >
+                <Image
                   src={member.image}
                   alt={member.name}
                   width={100}
                   height={100}
                   style={{
                     borderRadius: "50%",
-                    objectFit: "cover"
-                  }} 
+                    objectFit: "cover",
+                  }}
                 />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <CardTitle>{member.name}</CardTitle>
                 <CardDescription>{member.description}</CardDescription>
               </div>
@@ -179,35 +213,51 @@ const Committee = () => {
       </div>
 
       {/* Production Section */}
-      <h3 className="text-2xl lg:text-3xl font-semibold mb-2 mt-8">Production</h3>
+      <h3 className="text-2xl lg:text-3xl font-semibold mb-2 mt-8">
+        Production
+      </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {productionMembers.map((member, index) => (
           <Card key={index} className="w-full">
-            <CardHeader style={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
-            <div style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "50%",
-                border: "1px solid lightgray",
+            <CardHeader
+              style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                flexShrink: 0, // Prevent shrinking of the div
-                marginRight: "16px",
-              }}>
-                <Image 
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  border: "1px solid lightgray",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden",
+                  flexShrink: 0, // Prevent shrinking of the div
+                  marginRight: "16px",
+                }}
+              >
+                <Image
                   src={member.image}
                   alt={member.name}
                   width={100}
                   height={100}
                   style={{
                     borderRadius: "50%",
-                    objectFit: "cover"
-                  }} 
+                    objectFit: "cover",
+                  }}
                 />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <CardTitle>{member.name}</CardTitle>
                 <CardDescription>{member.description}</CardDescription>
               </div>
